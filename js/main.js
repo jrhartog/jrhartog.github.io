@@ -5,7 +5,7 @@ var scoreText;
 
 function preload() {
   game.load.image('sky', 'assets/sky.png');
-  game.load.image('seedling', 'assets/seedling.png');
+  game.load.image('seedling', 'assets/dude.png');
 }
 
 function create() {
