@@ -2,6 +2,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create
 var platforms;
 var score = 0;
 var scoreText;
+cursors = game.input.keyboard.createCursorKeys();
 
 function preload() {
   game.load.image('sky', 'assets/sky.png');
