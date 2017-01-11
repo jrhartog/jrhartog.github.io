@@ -11,11 +11,10 @@ function preload() {
   game.load.image('sky', 'assets/sky.png');
   game.load.image('ground', 'assets/platform.png');
   game.load.image('star', 'assets/star.png');
-  game.load.spritesheet('seedling', 'assets/dude.png');
+  game.load.spritesheet('seedling', 'assets/seedling.png', 12, 21, 9);
 }
 
 function create() {
-    cursors = game.input.keyboard.createCursorKeys();
 
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -80,6 +79,10 @@ function create() {
     }
 
     scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    cursors = game.input.keyboard.addKeys({'up' : Phaser.KeyCode.W, 
+              'down' : Phaser.KeyCode.S, 'left' : Phaser.KeyCode.A, 
+              'right' : Phaser.KeyCode.D});
 }
 
 function update() {
