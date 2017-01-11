@@ -1,18 +1,19 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 var platforms;
+var cursors;
 var score = 0;
 var scoreText;
-cursors = game.input.keyboard.createCursorKeys();
 
 function preload() {
   game.load.image('sky', 'assets/sky.png');
   game.load.image('ground', 'assets/platform.png');
   game.load.image('star', 'assets/star.png');
-  game.load.image('seedling', 'assets/dude.png');
+  game.load.spritesheet('seedling', 'assets/dude.png');
 }
 
 function create() {
     scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    cursors = game.input.keyboard.createCursorKeys();
 
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
