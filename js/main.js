@@ -11,7 +11,7 @@ function preload() {
   game.load.image('sky', 'assets/sky.png');
   game.load.image('ground', 'assets/platform.png');
   game.load.image('star', 'assets/star.png');
-  game.load.spritesheet('seedling', 'assets/seedling.png', 12, 21, 9);
+  game.load.spritesheet('seedling', 'assets/seedling.png', 181, 319, 9);
 }
 
 function create() {
