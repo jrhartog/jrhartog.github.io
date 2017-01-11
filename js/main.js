@@ -80,9 +80,10 @@ function create() {
 
     scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-    cursors = game.input.keyboard.addKeys({'up' : Phaser.KeyCode.W, 
-              'down' : Phaser.KeyCode.S, 'left' : Phaser.KeyCode.A, 
-              'right' : Phaser.KeyCode.D});
+    cursors = game.input.keyboard.createCursorKeys();
+//    cursors = game.input.keyboard.addKeys({'up' : Phaser.KeyCode.W, 
+//              'down' : Phaser.KeyCode.S, 'left' : Phaser.KeyCode.A, 
+//              'right' : Phaser.KeyCode.D});
 }
 
 function update() {
