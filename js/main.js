@@ -83,7 +83,10 @@ function create() {
 
 function update() {
     //  Collide the player and the stars with the platforms
-    var hitPlatform = game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(stars, platforms);
+
+    game.physics.arcade.overlap(player, stars, collectStar, null, this);
 
     //  Reset the players velocity (movement)
     player.body.velocity.x = 0;
@@ -116,9 +119,6 @@ function update() {
         player.body.velocity.y = -350;
     }
 
-    game.physics.arcade.collide(stars, platforms);
-
-    game.physics.arcade.overlap(player, stars, collectStar, null, this);
 }
 
 function collectStar (player, star) {
