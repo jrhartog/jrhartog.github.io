@@ -32,7 +32,7 @@ function create() {
     var ground = platforms.create(0, game.world.height - 64, 'ground');
 
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-    ground.scale.setTo(2, 2);
+    ground.scale.setTo(2, 1);
 
     //  This stops it from falling away when you jump on it
     ground.body.immovable = true;
@@ -47,7 +47,7 @@ function create() {
     ledge.body.immovable = true;
 
     // The player and its settings
-    player = game.add.sprite(32, game.world.height - 150, 'seedling');
+    player = game.add.sprite(32, game.world.height - 64, 'seedling');
 
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
