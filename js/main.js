@@ -47,7 +47,7 @@ function create() {
     ledge.body.immovable = true;
 
     // The player and its settings
-    player = game.add.sprite(32, game.world.height - 64, 'seedling');
+    player = game.add.sprite(32, game.world.height - 150, 'seedling');
 
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
@@ -88,7 +88,7 @@ function create() {
 
 function update() {
     //  Collide the player and the stars with the platforms
-    var hitPlatform = game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(player, platforms);
     game.physics.arcade.collide(stars, platforms);
 
     game.physics.arcade.overlap(player, stars, collectStar, null, this);
@@ -119,7 +119,7 @@ function update() {
     }
 
     //  Allow the player to jump if they are touching the ground.
-    if (cursors.up.isDown && (player.body.touching.down || hitPlatform))
+    if (cursors.up.isDown && player.body.touching.down)
     {
         player.body.velocity.y = -150;
     }
