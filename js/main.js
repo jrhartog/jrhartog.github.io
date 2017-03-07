@@ -12,6 +12,7 @@ function preload() {
   game.load.image('ground', 'assets/platform.png');
   game.load.image('star', 'assets/star.png');
   game.load.spritesheet('seedling', 'assets/seedling.png', 54, 96, 9);
+  game.load.image('grid', 'assets/600by800grid.png');
 }
 
 function create() {
@@ -49,6 +50,8 @@ function create() {
     // The player and its settings
     player = game.add.sprite(32, game.world.height - 150, 'seedling');
 
+    //cheat grid
+    grid = game.add.sprite(400,300,'grid')
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
 
