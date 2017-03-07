@@ -51,7 +51,7 @@ function create() {
     player = game.add.sprite(32, game.world.height - 150, 'seedling');
 
     //cheat grid
-    grid = game.add.sprite(400,300,'grid')
+    grid = game.add.sprite(0,0,'grid')
     //  We need to enable physics on the player
     game.physics.arcade.enable(player);
 
